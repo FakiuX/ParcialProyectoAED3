@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ingresos">
+
+    <TextView
+        android:id="@+id/tvIngreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Nuevo Ingreso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="Monto:"
+        app:layout_constraintEnd_toStartOf="@+id/etMonto"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngreso" />
+
+    <EditText
+        android:id="@+id/etMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngreso" />
+
+    <TextView
+        android:id="@+id/tvConcepto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:text="Concepto:"
+        app:layout_constraintEnd_toStartOf="@+id/spConcepto"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMonto" />
+
+    <Spinner
+        android:id="@+id/spConcepto"
+        android:layout_width="212dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMonto" />
+
+    <Button
+        android:id="@+id/btnFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="84dp"
+        android:onClick="calendar"
+        android:text="Seleccionar Fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spConcepto" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="64dp"
+        android:text="Fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFecha" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="76dp"
+        android:text="Aceptar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFecha" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="32dp"
+        android:onClick="salir"
+        android:text="Cancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAceptar" />
+
+</android.support.constraint.ConstraintLayout>
